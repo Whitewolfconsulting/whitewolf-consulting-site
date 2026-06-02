@@ -1,0 +1,100 @@
+.intro {
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(240,232,208,0.55);
+  max-width: 680px;
+}
+
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.serviceItem {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 60px;
+  align-items: start;
+  padding: 48px 0;
+  border-bottom: 1px solid rgba(196,154,40,0.08);
+  transition: all 0.3s;
+}
+
+.serviceItem:last-child { border-bottom: none; }
+
+.serviceItem:hover { background: rgba(196,154,40,0.02); }
+
+.serviceLeft {}
+
+.serviceIcon { font-size: 32px; margin-bottom: 16px; }
+
+.serviceTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+.serviceBody {
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(240,232,208,0.55);
+}
+
+.serviceRight {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(196,154,40,0.1);
+  border-left: 3px solid var(--gold);
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.servicePointsLabel {
+  font-size: 8px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.servicePoints {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.servicePoints li {
+  font-size: 12px;
+  color: rgba(240,232,208,0.55);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+
+.servicePoints li::before {
+  content: '▪';
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.ctaBlock { text-align: center; max-width: 640px; margin: 0 auto; }
+
+.ctaBody {
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(240,232,208,0.5);
+  margin: 24px 0 36px;
+}
+
+.ctaBtns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .serviceItem { grid-template-columns: 1fr; gap: 28px; }
+}

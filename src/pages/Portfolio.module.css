@@ -1,0 +1,116 @@
+.intro {
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(240,232,208,0.55);
+  max-width: 680px;
+  margin-bottom: 48px;
+}
+
+.totalBar {
+  display: flex;
+  gap: 60px;
+  padding: 40px;
+  background: rgba(196,154,40,0.03);
+  border: 1px solid rgba(196,154,40,0.12);
+  border-radius: 6px;
+}
+
+.totalStat { display: flex; flex-direction: column; gap: 4px; }
+
+.totalNum {
+  font-family: 'Cinzel', serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.totalLabel {
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.catBlock {
+  border-bottom: 1px solid rgba(196,154,40,0.08);
+  padding-bottom: 48px;
+}
+
+.catBlock:last-child { border-bottom: none; }
+
+.catHeader {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.catNum {
+  font-family: 'Cinzel', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: rgba(196,154,40,0.3);
+  line-height: 1;
+  min-width: 60px;
+}
+
+.catName {
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.catCount {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.6;
+}
+
+.toolGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.toolTag {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(196,154,40,0.1);
+  border-radius: 3px;
+  padding: 8px 16px;
+  font-size: 11px;
+  color: rgba(240,232,208,0.55);
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+}
+
+.toolTag:hover {
+  border-color: rgba(196,154,40,0.25);
+  color: rgba(240,232,208,0.8);
+}
+
+.ctaBlock { text-align: center; max-width: 640px; margin: 0 auto; }
+
+.ctaBody {
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(240,232,208,0.5);
+  margin: 24px 0 36px;
+}
+
+.ctaBtns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+@media (max-width: 768px) {
+  .totalBar { flex-wrap: wrap; gap: 32px; }
+}

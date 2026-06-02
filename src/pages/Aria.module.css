@@ -1,0 +1,214 @@
+.ariaHero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 60px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(196,154,40,0.08);
+}
+
+.heroBg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(196,154,40,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(0,0,0,0.5) 0%, transparent 60%);
+}
+
+.wordmark {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(60px, 10vw, 100px);
+  font-weight: 700;
+  letter-spacing: 24px;
+  background: linear-gradient(135deg, #fff 0%, #fdf5d8 10%, #d4af37 40%, #b89428 60%, #6a5012 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.fullName {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: rgba(196,154,40,0.55);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.heroDesc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(240,232,208,0.55);
+  margin-bottom: 36px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroBtns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* FEATURES */
+.featGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.featCard {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(196,154,40,0.08);
+  border-top: 2px solid var(--gold);
+  border-radius: 4px;
+  padding: 28px 20px;
+  transition: all 0.3s;
+}
+
+.featCard:hover {
+  border-color: rgba(196,154,40,0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.featIcon { font-size: 22px; margin-bottom: 12px; }
+
+.featTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.featBody { font-size: 12px; line-height: 1.7; color: rgba(240,232,208,0.45); }
+
+/* STACK */
+.stackSection {
+  background: rgba(0,0,0,0.4);
+  border-top: 1px solid rgba(196,154,40,0.08);
+  border-bottom: 1px solid rgba(196,154,40,0.08);
+  padding: 80px 60px;
+}
+
+.stackInner { max-width: 1200px; margin: 0 auto; }
+
+.stackGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.stackTag {
+  background: rgba(196,154,40,0.06);
+  border: 1px solid rgba(196,154,40,0.2);
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(196,154,40,0.7);
+  font-weight: 600;
+}
+
+/* PRICING */
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.pricingCard {
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(196,154,40,0.12);
+  border-radius: 6px;
+  padding: 36px 28px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.pricingCard:hover {
+  border-color: rgba(196,154,40,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.featured {
+  border-color: rgba(196,154,40,0.35) !important;
+  background: rgba(196,154,40,0.04) !important;
+}
+
+.pricingBadge {
+  position: absolute;
+  top: -12px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: #0a0800;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pricingTier {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.pricingPrice {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.pricingUnit {
+  font-size: 10px;
+  color: var(--gray);
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.pricingFeatures {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.pricingFeatures li {
+  font-size: 12px;
+  color: rgba(240,232,208,0.55);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+
+.pricingFeatures li::before {
+  content: '▪';
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .featGrid { grid-template-columns: repeat(2, 1fr); }
+  .pricingGrid { grid-template-columns: 1fr; }
+  .ariaHero { padding: 60px 24px; }
+  .stackSection { padding: 60px 24px; }
+}
