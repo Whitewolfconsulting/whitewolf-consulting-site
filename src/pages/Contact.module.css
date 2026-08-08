@@ -8,7 +8,7 @@
 .body {
   font-size: 14px;
   line-height: 1.9;
-  color: rgba(240,232,208,0.55);
+  color: rgba(244,247,248,0.55);
   margin-bottom: 40px;
 }
 
@@ -27,31 +27,31 @@
 .contactIcon {
   width: 36px;
   height: 36px;
-  border: 1px solid rgba(196,154,40,0.25);
+  border: 1px solid rgba(167,176,185,0.25);
   border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
   flex-shrink: 0;
-  color: var(--gold);
+  color: var(--ww-silver);
 }
 
 .contactLabel {
   font-size: 9px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--gray);
+  color: rgba(167,176,185,0.75);
   margin-bottom: 4px;
 }
 
 .contactValue {
   font-size: 13px;
-  color: var(--cream-warm);
+  color: var(--ww-frost);
 }
 
 .contactValue a {
-  color: var(--gold);
+  color: var(--ww-silver);
   text-decoration: none;
   transition: opacity 0.2s;
 }
@@ -75,16 +75,16 @@
   font-size: 9px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(196,154,40,0.6);
+  color: rgba(167,176,185,0.75);
   font-weight: 600;
 }
 
 .formInput, .formTextarea {
-  background: rgba(0,0,0,0.4);
-  border: 1px solid rgba(196,154,40,0.15);
+  background: rgba(21,26,32,0.55);
+  border: 1px solid rgba(167,176,185,0.15);
   border-radius: 4px;
   padding: 14px 16px;
-  color: var(--cream-warm);
+  color: var(--ww-frost);
   font-family: 'Raleway', sans-serif;
   font-size: 13px;
   outline: none;
@@ -93,12 +93,12 @@
 }
 
 .formInput:focus, .formTextarea:focus {
-  border-color: rgba(196,154,40,0.4);
-  background: rgba(196,154,40,0.02);
+  border-color: rgba(167,176,185,0.4);
+  background: rgba(167,176,185,0.03);
 }
 
 .formInput::placeholder, .formTextarea::placeholder {
-  color: rgba(240,232,208,0.2);
+  color: rgba(244,247,248,0.2);
   font-size: 12px;
 }
 
@@ -117,8 +117,8 @@
 .successBlock {
   text-align: center;
   padding: 60px 40px;
-  background: rgba(196,154,40,0.04);
-  border: 1px solid rgba(196,154,40,0.2);
+  background: rgba(167,176,185,0.04);
+  border: 1px solid rgba(167,176,185,0.2);
   border-radius: 6px;
 }
 
@@ -126,20 +126,20 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: rgba(196,154,40,0.1);
-  border: 1px solid rgba(196,154,40,0.3);
+  background: rgba(167,176,185,0.1);
+  border: 1px solid rgba(167,176,185,0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  color: var(--gold);
+  color: var(--ww-silver);
   margin: 0 auto 20px;
 }
 
 .successTitle {
   font-family: 'Cinzel', serif;
   font-size: 20px;
-  color: var(--white);
+  color: var(--ww-white);
   margin-bottom: 12px;
   letter-spacing: 2px;
 }
@@ -147,7 +147,7 @@
 .successBody {
   font-size: 14px;
   line-height: 1.8;
-  color: rgba(240,232,208,0.5);
+  color: rgba(244,247,248,0.5);
 }
 
 @media (max-width: 900px) {

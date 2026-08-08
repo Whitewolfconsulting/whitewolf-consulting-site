@@ -1,7 +1,7 @@
 .intro {
   font-size: 15px;
   line-height: 1.9;
-  color: rgba(240,232,208,0.55);
+  color: rgba(244,247,248,0.55);
   max-width: 680px;
   margin-bottom: 48px;
 }
@@ -10,8 +10,8 @@
   display: flex;
   gap: 60px;
   padding: 40px;
-  background: rgba(196,154,40,0.03);
-  border: 1px solid rgba(196,154,40,0.12);
+  background: rgba(167,176,185,0.03);
+  border: 1px solid rgba(167,176,185,0.12);
   border-radius: 6px;
 }
 
@@ -21,7 +21,7 @@
   font-family: 'Cinzel', serif;
   font-size: 40px;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--ww-frost);
   line-height: 1;
 }
 
@@ -29,7 +29,7 @@
   font-size: 9px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--gray);
+  color: rgba(167,176,185,0.75);
 }
 
 .categories {
@@ -38,8 +38,13 @@
   gap: 48px;
 }
 
+/* Each category block stays on the master palette. Individual
+   portfolio pieces may introduce their own controlled accent later --
+   the surrounding structure here is intentionally left neutral so
+   that variation, so nothing here should be hard-coded to a
+   section-identity color. */
 .catBlock {
-  border-bottom: 1px solid rgba(196,154,40,0.08);
+  border-bottom: 1px solid rgba(167,176,185,0.08);
   padding-bottom: 48px;
 }
 
@@ -56,7 +61,7 @@
   font-family: 'Cinzel', serif;
   font-size: 48px;
   font-weight: 700;
-  color: rgba(196,154,40,0.3);
+  color: rgba(167,176,185,0.3);
   line-height: 1;
   min-width: 60px;
 }
@@ -65,7 +70,7 @@
   font-family: 'Cinzel', serif;
   font-size: 20px;
   font-weight: 700;
-  color: var(--white);
+  color: var(--ww-white);
   letter-spacing: 1px;
   margin-bottom: 4px;
 }
@@ -74,8 +79,8 @@
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--gold);
-  opacity: 0.6;
+  color: var(--ww-silver);
+  opacity: 0.7;
 }
 
 .toolGrid {
@@ -86,18 +91,18 @@
 
 .toolTag {
   background: rgba(0,0,0,0.3);
-  border: 1px solid rgba(196,154,40,0.1);
+  border: 1px solid rgba(167,176,185,0.1);
   border-radius: 3px;
   padding: 8px 16px;
   font-size: 11px;
-  color: rgba(240,232,208,0.55);
+  color: rgba(244,247,248,0.55);
   letter-spacing: 0.5px;
   transition: all 0.2s;
 }
 
 .toolTag:hover {
-  border-color: rgba(196,154,40,0.25);
-  color: rgba(240,232,208,0.8);
+  border-color: rgba(167,176,185,0.28);
+  color: rgba(244,247,248,0.8);
 }
 
 .ctaBlock { text-align: center; max-width: 640px; margin: 0 auto; }
@@ -105,7 +110,7 @@
 .ctaBody {
   font-size: 14px;
   line-height: 1.9;
-  color: rgba(240,232,208,0.5);
+  color: rgba(244,247,248,0.5);
   margin: 24px 0 36px;
 }
 

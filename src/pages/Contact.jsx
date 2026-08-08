@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import styles from './Contact.module.css'
 
 export default function Contact() {
@@ -67,7 +68,7 @@ export default function Contact() {
                 <div>
                   <div className={styles.contactLabel}>Portfolio</div>
                   <div className={styles.contactValue}>
-                    <a href="https://sites.google.com/view/brian-womack" target="_blank" rel="noreferrer">sites.google.com/view/brian-womack</a>
+                    <Link to="/portfolio">View Portfolio</Link>
                   </div>
                 </div>
               </div>

@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.top}>
         <div className={styles.brand}>
-          <img src="/white_wolf.png" alt="White Wolf Consulting LLC" />
+          <img src="/images/white-wolf-logo.png" alt="White Wolf Consulting LLC" />
           <div>
             <div className={styles.company}>White Wolf Consulting LLC</div>
             <div className={styles.tagline}>Strategy · Execution · Results</div>
@@ -32,15 +32,14 @@ export default function Footer() {
             <div className={styles.colTitle}>Connect</div>
             <a href="mailto:brian@whitewolfconsultingllc.com">brian@whitewolfconsultingllc.com</a>
             <a href="https://linkedin.com/in/brian-womack" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://sites.google.com/view/brian-womack" target="_blank" rel="noreferrer">Portfolio</a>
           </div>
         </div>
       </div>
 
       <div className={styles.bottom}>
-        <div className={styles.copy}>&copy; 2024 White Wolf Consulting LLC. All rights reserved.</div>
+        <div className={styles.copy}>&copy; 2026 White Wolf Consulting LLC. All rights reserved.</div>
         <div className={styles.aria}>
-          ARIA Platform: <a href="https://aria-automated-revenue-intelligence.netlify.app" target="_blank" rel="noreferrer">aria-automated-revenue-intelligence.netlify.app</a>
+          <a href="https://aria-automated-revenue-intelligence.netlify.app" target="_blank" rel="noreferrer">ARIA Platform</a>
         </div>
       </div>
     </footer>

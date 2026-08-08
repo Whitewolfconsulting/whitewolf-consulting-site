@@ -90,19 +90,6 @@ export default function Portfolio() {
           ))}
         </div>
       </section>
-
-      <div className="section-divider" />
-
-      <section className="section">
-        <div className={`${styles.ctaBlock} fade-up`}>
-          <div className="section-label" style={{textAlign:'center'}}>Live Portfolio</div>
-          <h2 className="section-title" style={{textAlign:'center'}}>See Every Tool<br /><span>In Action</span></h2>
-          <p className={styles.ctaBody}>The full portfolio is live and accessible. Every tool is functional, documented, and built to production standards.</p>
-          <div className={styles.ctaBtns}>
-            <a href="https://sites.google.com/view/brian-womack" target="_blank" rel="noreferrer" className="btn-primary">View Full Portfolio</a>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

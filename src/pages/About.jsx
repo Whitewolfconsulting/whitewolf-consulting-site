@@ -14,7 +14,7 @@ export default function About() {
   }, [])
 
   return (
-    <div className="page-wrap" ref={ref}>
+    <div className={`page-wrap ${styles.aboutPage}`} ref={ref}>
       <section className="section">
         <div className={styles.grid}>
           <div className="fade-up">
@@ -39,7 +39,7 @@ export default function About() {
             </p>
             <div className={styles.btns}>
               <Link to="/contact" className="btn-primary">Work With Us</Link>
-              <a href="https://sites.google.com/view/brian-womack" target="_blank" rel="noreferrer" className="btn-secondary">View Portfolio</a>
+              <Link to="/portfolio" className="btn-secondary">View Portfolio</Link>
             </div>
           </div>
 

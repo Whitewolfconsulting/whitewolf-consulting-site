@@ -1,31 +1,47 @@
 :root {
-  --gold:       #c49a28;
-  --gold-light: #d4af37;
-  --gold-pale:  #f0d878;
-  --charcoal:   #1a1a1a;
-  --black:      #080808;
-  --black-deep: #030303;
-  --cream:      #faf7f2;
-  --cream-warm: #f0e8d0;
-  --gray:       #888888;
-  --gray-light: #aaaaaa;
-  --white:      #ffffff;
+  /* WHITE WOLF MASTER TOKENS */
+  --ww-obsidian: #0B0E11;
+  --ww-graphite: #151A20;
+  --ww-gunmetal: #252C34;
+  --ww-silver:   #A7B0B9;
+  --ww-ghost:    #F4F7F8;
+  --ww-white:    #FFFFFF;
+  --ww-frost:    #DCE4E8;
+
+  /* FENRIR -- reserved for future Fenrir section, not yet applied site-wide */
+  --fenrir-core:   #7C101C;
+  --fenrir-deep:   #4A0910;
+  --fenrir-ember:  #A61E2C;
+  --fenrir-muted:  #5F2730;
+  --fenrir-glow:   #D14A57;
+
+  /* ARIA -- executive emerald, applied on the ARIA page */
+  --aria-core:    #0E5A46;
+  --aria-deep:    #07382D;
+  --aria-emerald: #178565;
+  --aria-sage:    #5F8177;
+  --aria-signal:  #59B99A;
 }
+
+[data-theme="fenrir"]    { --accent: var(--fenrir-core); --accent-deep: var(--fenrir-deep); }
+[data-theme="aria"]      { --accent: var(--aria-core);   --accent-deep: var(--aria-deep); }
+[data-theme="boardroom"] { --accent: var(--fenrir-core); --accent-deep: #251014; }
+[data-theme="about"]     { --accent: var(--ww-silver);   --accent-deep: var(--ww-frost); }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--black-deep);
-  color: var(--cream-warm);
+  background: var(--ww-obsidian);
+  color: var(--ww-frost);
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
 }
 
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--black-deep); }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+::-webkit-scrollbar-track { background: var(--ww-obsidian); }
+::-webkit-scrollbar-thumb { background: var(--ww-silver); border-radius: 2px; }
 
 a { text-decoration: none; color: inherit; }
 
@@ -53,7 +69,7 @@ a { text-decoration: none; color: inherit; }
   font-size: 9px;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--ww-silver);
   margin-bottom: 16px;
   font-weight: 600;
 }
@@ -62,34 +78,34 @@ a { text-decoration: none; color: inherit; }
   font-family: 'Cinzel', serif;
   font-size: clamp(28px, 3.5vw, 44px);
   font-weight: 700;
-  color: var(--white);
+  color: var(--ww-white);
   line-height: 1.15;
   margin-bottom: 16px;
   letter-spacing: 2px;
 }
 
-.section-title span { color: var(--gold); }
+.section-title span { color: var(--ww-frost); }
 
 .section-underline {
   width: 50px;
   height: 2px;
-  background: linear-gradient(90deg, var(--gold), transparent);
+  background: linear-gradient(90deg, var(--ww-silver), transparent);
   margin-bottom: 48px;
 }
 
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(196,154,40,0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(167,176,185,0.25), transparent);
   margin: 0 60px;
 }
 
 .btn-primary {
   display: inline-block;
   padding: 14px 32px;
-  background: linear-gradient(135deg, #d4af37, #c49a28, #a07820);
+  background: linear-gradient(135deg, #DCE4E8, #A7B0B9, #6B7580);
   border: none;
   border-radius: 3px;
-  color: #0a0800;
+  color: #0B0E11;
   font-family: 'Raleway', sans-serif;
   font-size: 9px;
   font-weight: 700;
@@ -97,21 +113,21 @@ a { text-decoration: none; color: inherit; }
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s;
-  box-shadow: 0 4px 20px rgba(196,154,40,0.2);
+  box-shadow: 0 4px 20px rgba(167,176,185,0.15);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(196,154,40,0.35);
+  box-shadow: 0 8px 30px rgba(167,176,185,0.28);
 }
 
 .btn-secondary {
   display: inline-block;
   padding: 14px 32px;
   background: transparent;
-  border: 1px solid rgba(196,154,40,0.35);
+  border: 1px solid rgba(167,176,185,0.35);
   border-radius: 3px;
-  color: var(--gold);
+  color: var(--ww-silver);
   font-family: 'Raleway', sans-serif;
   font-size: 9px;
   font-weight: 600;
@@ -122,8 +138,8 @@ a { text-decoration: none; color: inherit; }
 }
 
 .btn-secondary:hover {
-  background: rgba(196,154,40,0.06);
-  border-color: var(--gold);
+  background: rgba(167,176,185,0.06);
+  border-color: var(--ww-silver);
   transform: translateY(-2px);
 }
 

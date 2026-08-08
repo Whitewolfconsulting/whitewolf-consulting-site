@@ -28,7 +28,7 @@ export default function Nav() {
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <Link to="/" className={styles.logo}>
-        <img src="/white_wolf.png" alt="White Wolf Consulting LLC" />
+        <img src="/images/white-wolf-logo.png" alt="White Wolf Consulting LLC" />
         <span className={styles.logoText}>White Wolf Consulting</span>
       </Link>
 
@@ -37,7 +37,7 @@ export default function Nav() {
           <li key={l.path}>
             <Link
               to={l.path}
-              className={`${styles.link} ${location.pathname === l.path ? styles.active : ''} ${l.path === '/contact' ? styles.cta : ''}`}
+              className={`${styles.link} ${location.pathname === l.path ? (l.path === '/aria' ? styles.activeAria : styles.active) : ''} ${l.path === '/contact' ? styles.cta : ''}`}
             >
               {l.label}
             </Link>
