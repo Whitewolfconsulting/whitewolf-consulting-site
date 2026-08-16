@@ -48,7 +48,7 @@ export default function About() {
               {[
                 { num: '549', label: 'Walmart Connection Centers Deployed' },
                 { num: '250', label: 'Pilot Flying J Locations Converted' },
-                { num: '11',  label: 'Hotel Properties Under Management' },
+                { num: '16',  label: 'Hotel Properties Led & Supported' },
                 { num: '40+', label: 'Custom Operational Systems Built' },
                 { num: '800+', label: 'Total Locations Impacted' },
                 { num: '20+', label: 'Years Enterprise Experience' },

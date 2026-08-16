@@ -124,7 +124,7 @@ export default function Home() {
           {[
             { num: '549', label: 'Walmart Connection Centers Deployed' },
             { num: '250', label: 'Pilot Flying J Locations Converted' },
-            { num: '11',  label: 'Hotel Properties Under Management' },
+            { num: '16',  label: 'Hotel Properties Led & Supported' },
             { num: '40+', label: 'Custom Operational Systems Built' },
           ].map(h => (
             <div key={h.num} className={styles.hlCard}>
@@ -147,7 +147,7 @@ export default function Home() {
         <div className={styles.whatGrid}>
           {[
             { icon: <IconGear />, title: 'Enterprise Implementation', body: 'End-to-end deployment leadership for PMS migrations, system cutovers, and multi-property go-lives.' },
-            { icon: <IconChart />, title: 'Operational Systems', body: 'Custom financial models, KPI dashboards, workforce tools, and real-time reporting built from scratch.' },
+            { icon: <IconChart />, title: 'Operational Systems', body: 'Custom financial models, KPI dashboards, workforce tools, and real-time reporting built from scratch — backed by Lean Six Sigma–certified process improvement.' },
             { icon: <IconLayers />, title: 'ARIA SaaS Platform', body: 'Live production executive intelligence platform for multi-property hospitality operators.' },
             { icon: <IconCycle />, title: 'Change Management', body: 'Ownership transitions, flag conversions, and management handovers without operational disruption.' },
             { icon: <IconChecklist />, title: 'Onboarding Infrastructure', body: 'Training programs, SOPs, and adoption systems that bring clients live fast and keep them there.' },
