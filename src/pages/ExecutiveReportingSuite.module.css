@@ -1,0 +1,145 @@
+.intro {
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(244,247,248,0.55);
+  max-width: 680px;
+  margin-bottom: 20px;
+}
+
+/* MODULE TABS -- same pill formula as .categoryTag/.stackTag elsewhere
+   on the site, with an active state borrowed from Nav's own .active
+   treatment (frost border/text), so this reads as a native control
+   rather than an invented component. */
+.moduleTabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+/* Explicit 4-then-3 row split (see JSX) rather than relying on flex-wrap,
+   so the grouping stays intentional regardless of viewport width. */
+.moduleTabRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.moduleTab {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(167,176,185,0.15);
+  border-radius: 3px;
+  padding: 10px 18px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(244,247,248,0.55);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.moduleTab:hover {
+  border-color: rgba(167,176,185,0.35);
+  color: var(--ww-frost);
+}
+
+.moduleTabActive {
+  border-color: var(--ww-frost);
+  color: var(--ww-white);
+  background: rgba(167,176,185,0.08);
+}
+
+/* MODULE CONTENT -- reuses the same graphite/obsidian panel formula as
+   Home's .whatCard and the Spreadsheets page's .previewPanel. */
+.modulePanel {
+  background: linear-gradient(160deg, rgba(37,44,52,0.5) 0%, rgba(21,26,32,0.5) 55%, rgba(11,14,17,0.55) 100%);
+  border: 1px solid rgba(167,176,185,0.1);
+  border-top: 1px solid rgba(200,210,218,0.22);
+  border-radius: 6px;
+  padding: 32px;
+}
+
+.moduleName {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--ww-white);
+  margin-bottom: 14px;
+}
+
+.moduleDesc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(244,247,248,0.55);
+  max-width: 720px;
+  margin-bottom: 24px;
+}
+
+.moduleMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.moduleMetaRow {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(244,247,248,0.55);
+}
+
+.moduleMetaLabel {
+  flex-shrink: 0;
+  min-width: 70px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ww-silver);
+  font-weight: 600;
+  padding-top: 2px;
+}
+
+.modulePreview {
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(167,176,185,0.1);
+}
+
+.modulePreview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+.modulePreviewCaption {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(167,176,185,0.08);
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(167,176,185,0.6);
+}
+
+.ctaBlock { text-align: center; max-width: 640px; margin: 0 auto; }
+
+.ctaBody {
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(244,247,248,0.5);
+  margin: 24px 0 36px;
+}
+
+@media (max-width: 768px) {
+  .modulePanel { padding: 24px 20px; }
+  .moduleMetaRow { flex-direction: column; gap: 4px; }
+  .moduleMetaLabel { min-width: 0; }
+}

@@ -22,6 +22,7 @@ export default function Nav() {
     { label: 'ARIA',      path: '/aria'       },
     { label: 'Services',  path: '/services'  },
     { label: 'Portfolio', path: '/portfolio' },
+    { label: 'Spreadsheets', path: '/spreadsheets' },
     { label: 'Contact',   path: '/contact'   },
   ]
 

@@ -19,6 +19,7 @@ export default function Footer() {
             <Link to="/about">About</Link>
             <Link to="/services">Services</Link>
             <Link to="/portfolio">Portfolio</Link>
+            <Link to="/spreadsheets">Spreadsheets</Link>
             <Link to="/contact">Contact</Link>
           </div>
           <div className={styles.col}>

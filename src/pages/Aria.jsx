@@ -82,42 +82,56 @@ export default function Aria() {
 
       <div className="section-divider" />
 
-      {/* PRICING */}
+      {/* ARIA SOLUTIONS */}
       <section className="section">
         <div className="fade-up">
-          <div className="section-label">Pricing</div>
-          <h2 className="section-title">Simple Transparent<br /><span>Pricing</span></h2>
+          <div className="section-label">ARIA Solutions</div>
+          <h2 className="section-title">Operational Intelligence Built<br /><span>To Scale</span></h2>
           <div className="section-underline" />
+          <p className={styles.pricingIntro}>
+            From individual property operations to complex multi-property portfolios, ARIA is structured around the
+            level of operational visibility, intelligence, and executive oversight your organization requires.
+          </p>
         </div>
         <div className={styles.pricingGrid}>
           {[
             {
-              tier: 'Core Operations', price: '$299–$399', unit: 'per property / month', featured: false,
-              features: ['Revenue & occupancy tracking', 'KPI dashboard', 'Property management', 'Staff roster management', 'Standard reporting'],
+              tier: 'Core Operations', tagline: 'Essential Operational Intelligence', featured: false,
+              description: 'Built for individual properties and focused operating teams requiring clear visibility into day-to-day performance.',
+              features: ['Revenue & occupancy tracking', 'KPI dashboard', 'Property management oversight', 'Staff roster management', 'Standard operational reporting'],
+              cta: 'Request Pricing',
             },
             {
-              tier: 'Operations Pro', price: '$449–$799', unit: 'per property / month', featured: true,
-              features: ['Everything in Core', 'Labor variance intelligence', 'Revenue vs Forecast charts', 'Multi-property portfolio view', 'Risk classification engine', 'Executive brief export'],
+              tier: 'Operations Pro', tagline: 'Advanced Portfolio Intelligence', featured: true,
+              description: 'Designed for operators managing multiple properties who require deeper labor, performance, risk, and portfolio visibility.',
+              features: ['Everything in Core', 'Labor variance intelligence', 'Revenue vs. forecast analysis', 'Multi-property portfolio view', 'Operational risk classification', 'Executive brief reporting'],
+              cta: 'Request Demo',
             },
             {
-              tier: 'Intelligence', price: '$899–$1,499', unit: 'per property / month', featured: false,
-              features: ['Everything in Pro', 'AI executive readout', 'Predictive labor modeling', 'Custom role hierarchy', 'Enterprise API access', 'Dedicated onboarding'],
+              tier: 'Intelligence', tagline: 'Enterprise Operational Intelligence', featured: false,
+              description: 'Built for ownership groups, management companies, and complex portfolios requiring executive-level intelligence and advanced operational modeling.',
+              features: ['Everything in Pro', 'AI executive readout', 'Predictive labor modeling', 'Custom organizational hierarchy', 'Enterprise API access', 'Dedicated onboarding and deployment support'],
+              cta: 'Contact White Wolf',
             },
           ].map(p => (
             <div key={p.tier} className={`${styles.pricingCard} ${p.featured ? styles.featured : ''} fade-up`}>
               {p.featured && <div className={styles.pricingBadge}>Most Popular</div>}
               <div className={styles.pricingTier}>{p.tier}</div>
-              <div className={styles.pricingPrice}>{p.price}</div>
-              <div className={styles.pricingUnit}>{p.unit}</div>
+              <div className={styles.pricingTagline}>{p.tagline}</div>
+              <p className={styles.pricingDesc}>{p.description}</p>
               <ul className={styles.pricingFeatures}>
                 {p.features.map(f => <li key={f}>{f}</li>)}
               </ul>
               <Link to="/contact" className={p.featured ? 'btn-primary' : 'btn-secondary'} style={{width:'100%',textAlign:'center',display:'block'}}>
-                {p.tier === 'Intelligence' ? 'Contact Us' : 'Get Started'}
+                {p.cta}
               </Link>
             </div>
           ))}
         </div>
+        <p className={`${styles.pricingFootnote} fade-up`}>
+          Deployment and pricing are structured around portfolio size, operational complexity, integrations, and
+          intelligence requirements.
+        </p>
       </section>
 
     </div>
