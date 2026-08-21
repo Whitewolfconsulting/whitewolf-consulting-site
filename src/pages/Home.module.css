@@ -312,13 +312,20 @@
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 64px; align-items: center;
 }
+/* aria-wolf-mark.png isn't fully transparent right at its outer edge
+   (a faint residual alpha from the original key), which read as a hard
+   square against this section's own background pattern. This mask is
+   scoped to the Home page's own .ariaMark class only -- the standalone
+   ARIA page's .heroWolfArt (Aria.module.css) is untouched, and the
+   source PNG itself is untouched. */
 .ariaMark {
-  width: 40px; height: 40px;
-  color: var(--aria-emerald);
+  display: block;
+  width: 120px; height: auto;
   margin-bottom: 18px;
-  filter: drop-shadow(0 0 10px rgba(23,133,101,0.4));
+  filter: drop-shadow(0 0 14px rgba(23,133,101,0.45));
+  -webkit-mask-image: radial-gradient(ellipse closest-side at 50% 50%, black 72%, transparent 100%);
+  mask-image: radial-gradient(ellipse closest-side at 50% 50%, black 72%, transparent 100%);
 }
-.ariaMark svg { width: 100%; height: 100%; display: block; }
 .ariaWord {
   font-family: 'Cinzel', serif;
   font-size: 72px; font-weight: 700;
@@ -352,6 +359,98 @@
 .ariaDot {
   width: 6px; height: 6px; border-radius: 50%;
   background: var(--aria-emerald); margin-top: 6px; flex-shrink: 0;
+}
+
+/* FENRIR TEASE -- mirrors .ariaTease's structure/rhythm exactly (same
+   grid, spacing, type scale) so the two platforms read as equally
+   important within the same design system; only the crimson tint and
+   Fenrir's own approved assets differ. */
+.fenrirTease {
+  position: relative;
+  overflow: hidden;
+  background: rgba(0,0,0,0.4);
+  border-top: 1px solid rgba(167,176,185,0.08);
+  border-bottom: 1px solid rgba(167,176,185,0.08);
+  padding: 56px 60px;
+}
+.fenrirTease::before {
+  content: '';
+  position: absolute; inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 18% 12%, rgba(176,32,47,0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 90%, rgba(176,32,47,0.05) 0%, transparent 50%);
+}
+.fenrirTease::after {
+  content: '';
+  position: absolute; inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(176,32,47,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(176,32,47,0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 72%);
+}
+.fenrirTeaseInner {
+  position: relative; z-index: 1;
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 64px; align-items: center;
+}
+/* Fenrir's crop carries more transparent margin than ARIA's (needed so
+   its own edge fade has room to work without clipping the ears/chin --
+   see Fenrir.module.css), so it's sized wider than .ariaMark to render
+   the actual wolf artwork at a comparable visual size. */
+.fenrirMark {
+  display: block;
+  width: 190px; height: auto;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 0 14px rgba(176,32,47,0.5));
+}
+.fenrirWord {
+  font-family: 'Cinzel', serif;
+  font-size: 72px; font-weight: 700;
+  letter-spacing: 20px;
+  background: linear-gradient(135deg, #fff 0%, #f0d7da 10%, #85171f 40%, #5a0e13 65%, #380709 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  line-height: 1; margin-bottom: 8px;
+}
+.fenrirSubtitle {
+  font-size: 10px; letter-spacing: 3px;
+  color: var(--ww-silver); text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.fenrirTagline {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px; font-weight: 600; letter-spacing: 0.3px;
+  color: var(--ww-ghost);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+.fenrirStatusBadge {
+  display: inline-block;
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: #E5636B;
+  border: 1px solid rgba(176,32,47,0.4);
+  background: rgba(176,32,47,0.08);
+  border-radius: 3px;
+  padding: 7px 16px;
+  margin-bottom: 20px;
+}
+.fenrirBody {
+  font-size: 14px; line-height: 1.9;
+  color: rgba(244,247,248,0.55); margin-bottom: 32px;
+}
+.fenrirBtns { display: flex; gap: 16px; flex-wrap: wrap; }
+.fenrirFeature {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 13px; color: rgba(244,247,248,0.6);
+  line-height: 1.5; margin-bottom: 14px;
+}
+.fenrirDot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #B0202F; margin-top: 6px; flex-shrink: 0;
 }
 
 /* CTA -- the seam out of ARIA back into neutral White Wolf territory.
@@ -392,7 +491,9 @@
   .hlGrid { grid-template-columns: repeat(2, 1fr); }
   .whatGrid { grid-template-columns: 1fr 1fr; }
   .ariaTeaseInner { grid-template-columns: 1fr; }
+  .fenrirTeaseInner { grid-template-columns: 1fr; }
   .hero { padding: 60px 24px; }
   .ariaTease { padding: 60px 24px; }
+  .fenrirTease { padding: 60px 24px; }
   .highlights { padding: 40px 24px; }
 }

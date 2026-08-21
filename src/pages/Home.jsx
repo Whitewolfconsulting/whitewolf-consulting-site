@@ -46,18 +46,6 @@ const IconTrendUp = () => (
   </svg>
 )
 
-/* Geometric wolf mark for the ARIA identity block -- low-poly/faceted
-   silhouette (straight edges only) rather than the photographic White
-   Wolf emblem, so ARIA reads as its own product mark within the same
-   family. Filled with currentColor so Home.module.css controls the
-   emerald tone. */
-const AriaWolfMark = () => (
-  <svg viewBox="0 0 100 100" fill="currentColor">
-    <path d="M50 8 L66 2 L60 26 L80 20 L68 40 L92 50 L72 46 L82 78 L56 62 L50 98 L44 62 L18 78 L28 46 L8 50 L32 40 L20 20 L40 26 L34 2 Z" />
-    <path d="M50 38 L50 86" stroke="rgba(255,255,255,0.22)" strokeWidth="1.5" />
-  </svg>
-)
-
 export default function Home() {
   const ref = useRef(null)
 
@@ -183,7 +171,7 @@ export default function Home() {
       <section className={styles.ariaTease}>
         <div className={`${styles.ariaTeaseInner} fade-up`}>
           <div className={styles.ariaTeaseLeft}>
-            <div className={styles.ariaMark}><AriaWolfMark /></div>
+            <img src="/images/aria-wolf-mark.png" alt="ARIA geometric wolf mark" className={styles.ariaMark} />
             <div className="section-label">Proprietary Platform</div>
             <div className={styles.ariaWord}>ARIA</div>
             <div className={styles.ariaSubtitle}>Operational Intelligence Platform</div>
@@ -209,6 +197,46 @@ export default function Home() {
             ].map(f => (
               <div key={f} className={styles.ariaFeature}>
                 <div className={styles.ariaDot} />
+                {f}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="section-divider" />
+
+      {/* FENRIR TEASER */}
+      <section className={styles.fenrirTease}>
+        <div className={`${styles.fenrirTeaseInner} fade-up`}>
+          <div className={styles.fenrirTeaseLeft}>
+            <img src="/images/fenrir-wolf-mark.png" alt="Fenrir geometric wolf mark" className={styles.fenrirMark} />
+            <div className="section-label">Proprietary Platform</div>
+            <div className={styles.fenrirWord}>FENRIR</div>
+            <div className={styles.fenrirSubtitle}>Field Network Execution, Risk & Intelligence Response</div>
+            <p className={styles.fenrirTagline}>Operational Command. Field Execution. Verified Completion.</p>
+            <div className={styles.fenrirStatusBadge}>In Development</div>
+            <p className={styles.fenrirBody}>
+              Fenrir is White Wolf Consulting's operational command and execution platform — built to coordinate
+              distributed operations, assign accountability, manage risk, track execution, escalate critical
+              issues, and verify completion.
+            </p>
+            <div className={styles.fenrirBtns}>
+              <Link to="/contact" className="btn-primary">Contact White Wolf</Link>
+              <Link to="/fenrir" className="btn-secondary">Learn More</Link>
+            </div>
+          </div>
+          <div className={styles.fenrirTeaseRight}>
+            {[
+              'Distributed operations coordination',
+              'Accountability assignment',
+              'Risk and issue escalation',
+              'Execution tracking',
+              'Completion verification',
+              'Field network command visibility',
+            ].map(f => (
+              <div key={f} className={styles.fenrirFeature}>
+                <div className={styles.fenrirDot} />
                 {f}
               </div>
             ))}
