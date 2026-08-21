@@ -75,9 +75,11 @@
 
 .active { color: var(--ww-frost) !important; }
 
-/* ARIA is the one page identity allowed to surface in nav -- a subtle
-   emerald active-state accent, never a full nav recolor. */
+/* ARIA and Fenrir are the two product identities allowed to surface in
+   nav -- a subtle color accent on their own active state, never a full
+   nav recolor. */
 .activeAria { color: var(--aria-emerald) !important; }
+.activeFenrir { color: #B0202F !important; }
 
 .cta {
   background: transparent;

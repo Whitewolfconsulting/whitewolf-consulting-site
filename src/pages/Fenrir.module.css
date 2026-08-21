@@ -1,0 +1,228 @@
+/* Crimson identity tokens, scoped to this page only -- not added to
+   global.css so nothing outside /fenrir can be affected. */
+.fenrirPage {
+  --fenrir-core:    #5C0F1A;
+  --fenrir-deep:    #35080F;
+  --fenrir-crimson: #B0202F;
+  --fenrir-ember:   #D6444F;
+  --fenrir-signal:  #E5636B;
+}
+
+.fenrirHero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 60px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(176,32,47,0.14);
+}
+
+.heroBg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 55% at 50% 42%, rgba(176,32,47,0.16) 0%, transparent 68%),
+    radial-gradient(ellipse at 50% 0%, rgba(176,32,47,0.13) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(0,0,0,0.5) 0%, transparent 60%);
+}
+
+/* Faint diagonal circuit-like hairlines confined to the far left/right
+   thirds, matching the restrained side atmosphere already established
+   for ARIA's hero -- recolored to crimson for Fenrir. */
+.heroBg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(115deg, rgba(176,32,47,0.16) 0px, rgba(176,32,47,0.16) 1px, transparent 1px, transparent 15px);
+  -webkit-mask-image: radial-gradient(ellipse 55% 75% at 50% 50%, transparent 45%, black 90%);
+  mask-image: radial-gradient(ellipse 55% 75% at 50% 50%, transparent 45%, black 90%);
+  opacity: 0.6;
+}
+
+/* The approved Fenrir identity artwork, split into the same three pieces
+   (eyebrow / wolf / wordmark+subtitle) as the approved ARIA hero
+   implementation. Transparency is baked directly into each PNG's real
+   alpha channel rather than applied via CSS mask-image -- the source art
+   has the wolf's ears, chin and the FENRIR letters sitting only a
+   handful of pixels from each piece's crop edge (Fenrir's larger wolf
+   leaves far less vertical breathing room between elements than ARIA's
+   smaller one), so a CSS mask-composite fade wide enough to soften the
+   boundary was also wide enough to clip that content. Baking the fade
+   into the file lets each piece use exactly the fade its own margins can
+   safely afford.
+
+   Display widths are NOT copied 1:1 from ARIA's pieces: Fenrir's crops
+   carry proportionally more transparent margin (added so the fade above
+   had somewhere safe to happen without touching the art), so the same
+   pixel width renders smaller actual artwork than ARIA's tighter crops
+   do. Widths below are scaled per-piece so the rendered wolf/wordmark
+   content matches ARIA's rendered content size, not just the crop box. */
+.heroEyebrowArt,
+.heroWordmarkArt,
+.heroWolfArt {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+.heroEyebrowArt {
+  width: 373px;
+  max-width: 90%;
+  margin-bottom: 22px;
+}
+
+.heroWordmarkArt {
+  width: 760px;
+  max-width: 100%;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.heroWolfArt {
+  width: 390px;
+  max-width: 75%;
+  margin-bottom: 14px;
+}
+
+.heroDesc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(244,247,248,0.55);
+  margin-bottom: 24px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.statusBadge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--fenrir-signal);
+  border: 1px solid rgba(176,32,47,0.4);
+  background: rgba(176,32,47,0.08);
+  border-radius: 3px;
+  padding: 7px 16px;
+  margin-bottom: 28px;
+}
+
+.heroBtns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* CORE CAPABILITIES */
+.capGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.capCard {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(167,176,185,0.08);
+  border-top: 2px solid var(--fenrir-core);
+  border-radius: 4px;
+  padding: 28px 24px;
+  transition: all 0.3s;
+}
+
+.capCard:hover {
+  border-color: rgba(176,32,47,0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.capTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--ww-white);
+  margin-bottom: 10px;
+}
+
+.capBody { font-size: 12.5px; line-height: 1.7; color: rgba(244,247,248,0.45); }
+
+/* ARIA + FENRIR RELATIONSHIP */
+.relationSection {
+  background: rgba(0,0,0,0.4);
+  border-top: 1px solid rgba(167,176,185,0.08);
+  border-bottom: 1px solid rgba(167,176,185,0.08);
+  padding: 80px 60px;
+}
+
+.relationInner { max-width: 1000px; margin: 0 auto; }
+
+.ariaWordInline { color: var(--aria-emerald); }
+.fenrirWordInline { color: var(--fenrir-crimson); }
+
+.relationBody {
+  font-size: 14.5px;
+  line-height: 1.9;
+  color: rgba(244,247,248,0.55);
+  max-width: 680px;
+  margin: 18px auto 0;
+}
+
+.ownGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 56px;
+}
+
+.ownCol {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(167,176,185,0.1);
+  border-radius: 6px;
+  padding: 28px 32px;
+}
+
+.ownHeading {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.ownList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.ownList li {
+  font-size: 13px;
+  color: rgba(244,247,248,0.6);
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+
+.ownList[data-variant="aria"] li::before {
+  content: '▪';
+  color: var(--aria-emerald);
+  flex-shrink: 0;
+}
+
+.ownList[data-variant="fenrir"] li::before {
+  content: '▪';
+  color: var(--fenrir-crimson);
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .capGrid { grid-template-columns: 1fr 1fr; }
+  .ownGrid { grid-template-columns: 1fr; }
+  .fenrirHero { padding: 60px 24px; }
+  .relationSection { padding: 60px 24px; }
+}

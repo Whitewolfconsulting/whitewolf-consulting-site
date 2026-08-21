@@ -20,6 +20,7 @@ export default function Nav() {
   const links = [
     { label: 'About',     path: '/about'     },
     { label: 'ARIA',      path: '/aria'       },
+    { label: 'Fenrir',    path: '/fenrir'     },
     { label: 'Services',  path: '/services'  },
     { label: 'Portfolio', path: '/portfolio' },
     { label: 'Spreadsheets', path: '/spreadsheets' },
@@ -38,7 +39,7 @@ export default function Nav() {
           <li key={l.path}>
             <Link
               to={l.path}
-              className={`${styles.link} ${location.pathname === l.path ? (l.path === '/aria' ? styles.activeAria : styles.active) : ''} ${l.path === '/contact' ? styles.cta : ''}`}
+              className={`${styles.link} ${location.pathname === l.path ? (l.path === '/aria' ? styles.activeAria : l.path === '/fenrir' ? styles.activeFenrir : styles.active) : ''} ${l.path === '/contact' ? styles.cta : ''}`}
             >
               {l.label}
             </Link>

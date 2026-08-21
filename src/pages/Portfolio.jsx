@@ -14,27 +14,22 @@ export default function Portfolio() {
 
   const categories = [
     {
-      name: 'Financial Systems',
-      count: 8,
-      tools: ['Annual Financial Templates', 'YOY Financial Tracker', 'Payroll Converter', 'Pay Stub Generator', 'Budget vs Actual Dashboard', 'Revenue Variance Tracker', 'GL Code Reference', 'Expense Log'],
+      name: 'Financial & Performance Systems',
+      count: 14,
+      tools: ['Annual Financial Templates', 'YOY Financial Tracker', 'Payroll Converter', 'Pay Stub Generator', 'Budget vs Actual Dashboard', 'Revenue Variance Tracker', 'GL Code Reference', 'Expense Log', 'Daily Checkout Tracker', 'Gross Revenue Dashboard', 'Revenue Trend Chart', 'YOY Departures Tracker', 'Occupancy Analytics', 'RevPAR Monitoring Tool'],
     },
     {
-      name: 'Workforce Management',
+      name: 'Workforce & Labor Systems',
       count: 7,
       tools: ['Labor Tracker', 'Timesheet System', 'Attendance Tracker', 'Hours Converter', 'Scheduling Tool', 'OT Monitoring Dashboard', 'Department Staffing Model'],
     },
     {
-      name: 'Performance Analytics',
-      count: 6,
-      tools: ['Daily Checkout Tracker', 'Gross Revenue Dashboard', 'Revenue Trend Chart', 'YOY Departures Tracker', 'Occupancy Analytics', 'RevPAR Monitoring Tool'],
-    },
-    {
-      name: 'Operational Tracking',
+      name: 'Operations & Compliance Systems',
       count: 12,
       tools: ['OOO Rooms Tracker', 'Vendor Log', 'Key Log', 'Room Setup Guide', 'Deep Clean Scheduler', 'Linen Rack Tracker', 'Cleanliness Tracker', 'Weekly Focus Board', 'Action Items Log', 'Board Photo Documentation System', 'Preventive Maintenance Inspector', 'Common Area Audit Tool'],
     },
     {
-      name: 'Training & Onboarding',
+      name: 'Training & Organizational Development',
       count: 8,
       tools: ['Medallia Training Guide', 'Front Desk Curriculum', 'Exemptions Guide', 'AGM Certification Program', 'Coaching Framework', 'HR Coaching Form', 'Brand Standards Implementation Guide', 'New Hire Onboarding Checklist'],
     },
@@ -45,23 +40,29 @@ export default function Portfolio() {
       <section className="section">
         <div className="fade-up">
           <div className="section-label">Operational Portfolio</div>
-          <h1 className="section-title">40+ Custom Tools<br /><span>Built From Scratch</span></h1>
+          <h1 className="section-title">250+ Operational Systems,<br /><span>Tools & Frameworks Built</span></h1>
           <div className="section-underline" />
           <p className={styles.intro}>
-            Every tool in this portfolio was built because an operation needed it and no off-the-shelf solution fit.
-            No templates. No outside help. Live, functional, and actively used across 11 properties in two states.
+            Across more than two decades of U.S. and international operations, Brian has built operational
+            systems, tools, and frameworks to solve real business problems — spanning field execution, financial
+            performance, workforce control, implementation, training, audit, compliance, risk, logistics,
+            executive reporting, and operational intelligence.
+          </p>
+          <p className={`${styles.intro} ${styles.introLast}`}>
+            The portfolio below represents selected examples of that work, not the entirety of Brian's
+            career-wide body of systems.
           </p>
         </div>
 
         <div className={`${styles.totalBar} fade-up delay-2`}>
           {[
-            { num: '40+', label: 'Total Tools' },
-            { num: '5',   label: 'Categories' },
-            { num: '11',  label: 'Properties' },
-            { num: '2',   label: 'States' },
+            { num: '250+', label: 'Operational Systems, Tools & Frameworks Built' },
+            { num: '800+', label: 'Enterprise Deployments' },
+            { num: '402',  label: 'Walmart Store Builds & Remodels' },
+            { num: 'U.S. & International', label: 'Operational Reach', compact: true },
           ].map(s => (
             <div key={s.label} className={styles.totalStat}>
-              <div className={styles.totalNum}>{s.num}</div>
+              <div className={`${styles.totalNum} ${s.compact ? styles.totalNumCompact : ''}`}>{s.num}</div>
               <div className={styles.totalLabel}>{s.label}</div>
             </div>
           ))}

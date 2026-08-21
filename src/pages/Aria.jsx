@@ -19,10 +19,13 @@ export default function Aria() {
       {/* HERO */}
       <section className={styles.ariaHero}>
         <div className={styles.heroBg} />
-        <div className="fade-up" style={{position:'relative',zIndex:2,textAlign:'center',maxWidth:800,margin:'0 auto'}}>
-          <div className="section-label" style={{textAlign:'center'}}>Proprietary SaaS Platform</div>
-          <div className={styles.wordmark}>ARIA</div>
-          <div className={styles.fullName}>Automated Revenue & Intelligence Analysis</div>
+        <div className="fade-up" style={{position:'relative',zIndex:2,textAlign:'center',maxWidth:1040,margin:'0 auto'}}>
+          <h1 style={{position:'absolute',width:1,height:1,padding:0,margin:-1,overflow:'hidden',clip:'rect(0,0,0,0)',whiteSpace:'nowrap',border:0}}>
+            Proprietary SaaS Platform — ARIA — Automated Revenue & Intelligence Analysis
+          </h1>
+          <img src="/images/aria-hero-eyebrow.png" alt="Proprietary SaaS Platform" className={styles.heroEyebrowArt} />
+          <img src="/images/aria-wolf-mark.png" alt="ARIA geometric wolf mark" className={styles.heroWolfArt} />
+          <img src="/images/aria-hero-wordmark.png" alt="ARIA — Automated Revenue & Intelligence Analysis" className={styles.heroWordmarkArt} />
           <p className={styles.heroDesc}>
             A fully deployed cloud SaaS application built from scratch without a development team.
             Live in production. Competing directly with Quore, Hotel Effectiveness, and the labor analytics layer of UKG.

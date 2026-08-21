@@ -46,6 +46,18 @@ const IconTrendUp = () => (
   </svg>
 )
 
+/* Geometric wolf mark for the ARIA identity block -- low-poly/faceted
+   silhouette (straight edges only) rather than the photographic White
+   Wolf emblem, so ARIA reads as its own product mark within the same
+   family. Filled with currentColor so Home.module.css controls the
+   emerald tone. */
+const AriaWolfMark = () => (
+  <svg viewBox="0 0 100 100" fill="currentColor">
+    <path d="M50 8 L66 2 L60 26 L80 20 L68 40 L92 50 L72 46 L82 78 L56 62 L50 98 L44 62 L18 78 L28 46 L8 50 L32 40 L20 20 L40 26 L34 2 Z" />
+    <path d="M50 38 L50 86" stroke="rgba(255,255,255,0.22)" strokeWidth="1.5" />
+  </svg>
+)
+
 export default function Home() {
   const ref = useRef(null)
 
@@ -73,7 +85,7 @@ export default function Home() {
           <div className={styles.heroLeft}>
             <div className={`${styles.eyebrow} fade-up`}>White Wolf Consulting LLC</div>
             <h1 className={`${styles.heroName} fade-up delay-1`}>
-              Brian Everett<br />Womack
+              Brian<br />Womack
             </h1>
             <div className={`${styles.heroTitle} fade-up delay-2`}>Operations & Implementation Executive <span className={styles.titleDivider}>|</span> Founder & CEO</div>
             <div className={`${styles.heroQuote} fade-up delay-2`}>
@@ -82,9 +94,9 @@ export default function Home() {
             </div>
             <div className={`${styles.heroDivider} fade-up delay-3`} />
             <p className={`${styles.heroDesc} fade-up delay-3`}>
-              Operations and implementation executive with 20+ years leading large-scale builds,
+              Operations and implementation executive with 25+ years leading large-scale builds,
               remodels, conversions, enterprise deployments, systems implementation, and
-              operational transformation across retail, travel centers, telecom, and hospitality.
+              operational transformation across big-box retail, oil & gas, travel centers, telecom, and hospitality.
             </p>
 
             <div className={`${styles.heroStats} fade-up delay-4`}>
@@ -125,7 +137,7 @@ export default function Home() {
             { num: '549', label: 'Walmart Connection Centers Deployed' },
             { num: '250', label: 'Pilot Flying J Locations Converted' },
             { num: '16',  label: 'Hotel Properties Led & Supported' },
-            { num: '40+', label: 'Custom Operational Systems Built' },
+            { num: '250+', label: 'Operational Systems, Tools & Frameworks Built' },
           ].map(h => (
             <div key={h.num} className={styles.hlCard}>
               <div className={styles.hlNum}>{h.num}</div>
@@ -147,7 +159,7 @@ export default function Home() {
         <div className={styles.whatGrid}>
           {[
             { icon: <IconGear />, title: 'Enterprise Implementation', body: 'End-to-end deployment leadership for PMS migrations, system cutovers, and multi-property go-lives.' },
-            { icon: <IconChart />, title: 'Operational Systems', body: 'Custom financial models, KPI dashboards, workforce tools, and real-time reporting built from scratch — backed by Lean Six Sigma–certified process improvement.' },
+            { icon: <IconChart />, title: 'Operational Systems', body: 'Custom financial models, KPI dashboards, workforce tools, and real-time reporting built from scratch — backed by Lean Six Sigma–certified process improvement and operational excellence.' },
             { icon: <IconLayers />, title: 'ARIA SaaS Platform', body: 'Live production executive intelligence platform for multi-property hospitality operators.' },
             { icon: <IconCycle />, title: 'Change Management', body: 'Ownership transitions, flag conversions, and management handovers without operational disruption.' },
             { icon: <IconChecklist />, title: 'Onboarding Infrastructure', body: 'Training programs, SOPs, and adoption systems that bring clients live fast and keep them there.' },
@@ -171,9 +183,11 @@ export default function Home() {
       <section className={styles.ariaTease}>
         <div className={`${styles.ariaTeaseInner} fade-up`}>
           <div className={styles.ariaTeaseLeft}>
+            <div className={styles.ariaMark}><AriaWolfMark /></div>
             <div className="section-label">Proprietary Platform</div>
             <div className={styles.ariaWord}>ARIA</div>
-            <div className={styles.ariaSubtitle}>Automated Revenue & Intelligence Analysis</div>
+            <div className={styles.ariaSubtitle}>Operational Intelligence Platform</div>
+            <p className={styles.ariaTagline}>Executive Intelligence. Operational Advantage.</p>
             <p className={styles.ariaBody}>
               A fully deployed cloud SaaS platform for multi-property hospitality operators.
               Real-time RevPAR, labor variance, risk classification, and executive briefs —

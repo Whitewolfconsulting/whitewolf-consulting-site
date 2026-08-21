@@ -312,6 +312,13 @@
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 64px; align-items: center;
 }
+.ariaMark {
+  width: 40px; height: 40px;
+  color: var(--aria-emerald);
+  margin-bottom: 18px;
+  filter: drop-shadow(0 0 10px rgba(23,133,101,0.4));
+}
+.ariaMark svg { width: 100%; height: 100%; display: block; }
 .ariaWord {
   font-family: 'Cinzel', serif;
   font-size: 72px; font-weight: 700;
@@ -322,8 +329,15 @@
 }
 .ariaSubtitle {
   font-size: 10px; letter-spacing: 3px;
-  color: rgba(89,185,154,0.75); text-transform: uppercase;
-  margin-bottom: 28px;
+  color: var(--ww-silver); text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.ariaTagline {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px; font-weight: 600; letter-spacing: 0.3px;
+  color: var(--ww-ghost);
+  line-height: 1.5;
+  margin-bottom: 24px;
 }
 .ariaBody {
   font-size: 14px; line-height: 1.9;

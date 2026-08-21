@@ -22,7 +22,7 @@ export default function About() {
             <h1 className="section-title">The Operator Who<br /><span>Builds What's Missing</span></h1>
             <div className="section-underline" />
             <p className={styles.body}>
-              Over 20 years, I've led enterprise-scale rollouts that most people only read about in case studies.
+              Over 25 years, I've led enterprise-scale rollouts that most people only read about in case studies.
               <strong> 549 Walmart Connection Centers</strong> launched nationwide.
               <strong> 250 Pilot Flying J locations</strong> converted in strict 24-hour windows.
               PMS migrations across multi-property hotel groups built from the ground up.
@@ -49,9 +49,9 @@ export default function About() {
                 { num: '549', label: 'Walmart Connection Centers Deployed' },
                 { num: '250', label: 'Pilot Flying J Locations Converted' },
                 { num: '16',  label: 'Hotel Properties Led & Supported' },
-                { num: '40+', label: 'Custom Operational Systems Built' },
+                { num: '250+', label: 'Operational Systems, Tools & Frameworks Built' },
                 { num: '800+', label: 'Total Locations Impacted' },
-                { num: '20+', label: 'Years Enterprise Experience' },
+                { num: '25+', label: 'Years Enterprise Experience' },
               ].map(m => (
                 <div key={m.num} className={styles.milestone}>
                   <div className={styles.mNum}>{m.num}</div>
@@ -69,12 +69,12 @@ export default function About() {
       <section className="section">
         <div className="fade-up">
           <div className="section-label">Career History</div>
-          <h2 className="section-title">Built Across<br /><span>Four Industries</span></h2>
+          <h2 className="section-title">Built In The Field.<br /><span>Proven In The Boardroom.</span></h2>
           <div className="section-underline" />
         </div>
         <div className={styles.timeline}>
           {[
-            { dates: '2024 – Present', company: 'White Wolf Consulting LLC', title: 'Founder, CEO & Lead Developer', body: 'Founded and built ARIA from scratch — a live production SaaS executive intelligence platform. Retained as operational consultant and transition lead by Champion Hospitality across three Oklahoma properties.' },
+            { dates: '2024 – Present', company: 'White Wolf Consulting LLC', title: 'Founder & CEO | Operations & Implementation Executive', body: 'Founded and built ARIA from scratch — a live production SaaS executive intelligence platform. Retained as operational consultant and transition lead by Champion Hospitality across three Oklahoma properties.' },
             { dates: '2020 – 2025',    company: 'Aimbridge Hospitality',     title: 'Implementation & Onboarding Lead | General Manager', body: 'Directed full operational standup for three hotel properties simultaneously. Led ownership transitions, flag conversions, PMS migrations, and built 20+ operational systems from scratch.' },
             { dates: '2017 – 2020',    company: "America's Car-Mart",        title: 'Business Development Manager | Corporate Trainer', body: 'Led operational turnaround across underperforming dealership locations. Built training programs, SOPs, and operational playbooks across a distributed retail network.' },
             { dates: '2014 – 2017',    company: 'AT&T',                      title: 'B2B Operations & Corporate Trainer', body: 'Delivered B2B operations training and process standardization. Earned Apple Masters, Google Masters, and Android Masters certifications.' },
@@ -100,14 +100,16 @@ export default function About() {
       <section className="section">
         <div className="fade-up">
           <div className="section-label">Credentials</div>
-          <h2 className="section-title">Education &<br /><span>Certifications</span></h2>
+          <h2 className="section-title">Education &<br /><span>Professional Credentials</span></h2>
           <div className="section-underline" />
         </div>
         <div className={styles.credGrid}>
           {[
             { title: 'BBA — International Business', sub: 'Hofstra University' },
+            { title: 'Lean Six Sigma Certified', sub: 'Process Improvement & Operational Excellence' },
             { title: 'Aimbridge Aspire Leadership Program', sub: 'Graduate' },
             { title: 'AHLEI Proctor', sub: 'American Hotel & Lodging Educational Institute' },
+            { title: 'Licensed Real Estate Professional', sub: 'Former License Holder | 2008–2013' },
             { title: 'Apple Masters Certified', sub: 'AT&T Technical Certification' },
             { title: 'Google Masters Certified', sub: 'AT&T Technical Certification' },
             { title: 'Android Masters Certified', sub: 'AT&T Technical Certification' },

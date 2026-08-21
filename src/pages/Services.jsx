@@ -17,7 +17,7 @@ export default function Services() {
     {
       icon: '⚙️',
       title: 'Enterprise Implementation Leadership',
-      body: 'End-to-end deployment leadership for PMS migrations, system cutovers, and multi-property go-lives. From readiness assessment through post-launch stabilization. We\'ve executed 800+ deployments across four industries. We know what breaks and how to prevent it.',
+      body: 'End-to-end deployment leadership for PMS migrations, system cutovers, and multi-property go-lives. From readiness assessment through post-launch stabilization. We\'ve executed 800+ deployments across big-box retail, oil & gas, travel centers, telecommunications, and hospitality. We know what breaks and how to prevent it.',
       points: ['System readiness assessment', 'Go-live execution & coordination', 'Post-launch stabilization', 'Escalation management', 'Multi-site parallel deployment'],
     },
     {
@@ -29,7 +29,7 @@ export default function Services() {
     {
       icon: '📊',
       title: 'Operational Systems Architecture',
-      body: 'Custom financial models, KPI dashboards, workforce management tools, and real-time reporting infrastructure built for your specific operation. 40+ tools built across 11 properties. No outside help. No templates.',
+      body: 'Custom financial models, KPI dashboards, workforce management tools, and real-time reporting infrastructure built for your specific operation — part of a 250+ systems portfolio built across U.S. and international operations. No outside help. No templates.',
       points: ['Custom financial models', 'Real-time KPI dashboards', 'Workforce management systems', 'Payroll and HR automation', 'Preventive maintenance systems'],
     },
     {
@@ -47,7 +47,7 @@ export default function Services() {
     {
       icon: '📈',
       title: 'Executive Consulting',
-      body: 'Strategic operational advisory for ownership groups, management companies, and SaaS organizations entering or scaling within the hospitality and franchise markets. Direct C-suite engagement with operator-level insight.',
+      body: 'Strategic operational advisory for ownership groups, management companies, and organizations navigating complex growth and operational transformation. Direct C-suite engagement with operator-level insight.',
       points: ['Operational assessment', 'Systems gap analysis', 'Executive reporting frameworks', 'Market entry strategy', 'SaaS implementation advisory'],
     },
   ]
@@ -60,9 +60,9 @@ export default function Services() {
           <h1 className="section-title">What White Wolf<br /><span>Delivers</span></h1>
           <div className="section-underline" />
           <p className={styles.intro}>
-            Every service we offer is backed by 20+ years of enterprise execution —
+            Every service we offer is backed by 25+ years of enterprise execution —
             not theory, not templates, not frameworks borrowed from a consulting textbook.
-            We've done this work at scale across retail, hospitality, telecom, and travel center industries.
+            We've done this work at scale across big-box retail, oil & gas, travel centers, telecommunications, and hospitality.
           </p>
         </div>
       </section>

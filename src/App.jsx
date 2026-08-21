@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import Aria from './pages/Aria'
+import Fenrir from './pages/Fenrir'
 import Services from './pages/Services'
 import Portfolio from './pages/Portfolio'
 import Spreadsheets from './pages/Spreadsheets'
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/aria" element={<Aria />} />
+        <Route path="/fenrir" element={<Fenrir />} />
         <Route path="/services" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/spreadsheets" element={<Spreadsheets />} />

@@ -3,6 +3,10 @@
   line-height: 1.9;
   color: rgba(244,247,248,0.55);
   max-width: 680px;
+  margin-bottom: 16px;
+}
+
+.introLast {
   margin-bottom: 48px;
 }
 
@@ -15,7 +19,7 @@
   border-radius: 6px;
 }
 
-.totalStat { display: flex; flex-direction: column; gap: 4px; }
+.totalStat { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
 
 .totalNum {
   font-family: 'Cinzel', serif;
@@ -23,6 +27,14 @@
   font-weight: 700;
   color: var(--ww-frost);
   line-height: 1;
+}
+
+/* Text-fit only: the "U.S. & International" reach metric is a phrase,
+   not a short number -- sized down so it reads as a headline value
+   instead of overflowing/wrapping like the others. */
+.totalNumCompact {
+  font-size: 22px;
+  line-height: 1.2;
 }
 
 .totalLabel {
